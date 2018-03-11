@@ -46,50 +46,6 @@ class App extends Component {
         <header className="card__header">
           <h1>Favorite<br></br>Fruits</h1>
         </header>
-        {/* <div className="card__bar-chart">
-          <div className="bar-chart__bar bar-chart__bar--apple">
-            <div className="bar-chart__bar__label">Apples</div>
-          </div>
-          <div className="bar-chart__bar bar-chart__bar--cherry">
-            <div className="bar-chart__bar__label">Cherries</div>
-          </div>
-          <div className="bar-chart__bar bar-chart__bar--orange">
-            <div className="bar-chart__bar__label">Pomegranites</div>
-          </div>
-          <div className="bar-chart__bar bar-chart__bar--navy">
-            <div className="bar-chart__bar__label">Blackberries</div>
-          </div>
-          <div className="bar-chart__bar bar-chart__bar--gold">
-            <div className="bar-chart__bar__label">Bananas</div>
-          </div>
-          <div className="bar-chart__bar bar-chart__bar--lime">
-            <div className="bar-chart__bar__label">Pears</div>
-          </div>
-          <div className="bar-chart__bar bar-chart__bar--orange">
-            <div className="bar-chart__bar__label">Oranges</div>
-          </div>
-          <div className="bar-chart__bar bar-chart__bar--apple">
-            <div className="bar-chart__bar__label">Mangos</div>
-          </div>
-          <div className="bar-chart__bar bar-chart__bar--green">
-            <div className="bar-chart__bar__label">Kiwis</div>
-          </div>
-          <div className="bar-chart__bar bar-chart__bar--brown">
-            <div className="bar-chart__bar__label">Pineapples</div>
-          </div>
-          <div className="bar-chart__bar bar-chart__bar--hotpink">
-            <div className="bar-chart__bar__label">Strawberries</div>
-          </div>
-          <div className="bar-chart__bar bar-chart__bar--orange">
-            <div className="bar-chart__bar__label">Cantaloupes</div>
-          </div>
-          <div className="bar-chart__bar bar-chart__bar--purple">
-            <div className="bar-chart__bar__label">Grapes</div>
-          </div>
-          <div className="bar-chart__bar bar-chart__bar--magenta">
-            <div className="bar-chart__bar__label">Watermelons</div>
-          </div>
-        </div> */}
         <Bar
           people={this.state.people}
         />
