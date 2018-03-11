@@ -144,39 +144,40 @@ h1::after {
   background-color: #c1272d;
 }
 
-.bar-chart__bar--orange {
+.bar-chart__bar--orange, .bar-chart__bar--canteloupe,
+.bar-chart__bar--mango {
   background-color: #f15a24;
 }
 
-.bar-chart__bar--navy {
+.bar-chart__bar--blackberries {
   background-color: #2e3192;
 }
 
-.bar-chart__bar--gold {
+.bar-chart__bar--banana {
   background-color: #fbb03b;
 }
 
-.bar-chart__bar--lime {
+.bar-chart__bar--pear {
   background-color: #8cc63f;
 }
 
-.bar-chart__bar--green {
+.bar-chart__bar--kiwi {
   background-color: #009245;
 }
 
-.bar-chart__bar--brown {
+.bar-chart__bar--pineapple {
   background-color: #754c24;
 }
 
-.bar-chart__bar--hotpink {
+.bar-chart__bar--strawberries {
   background-color: #ed1e79;
 }
 
-.bar-chart__bar--purple {
+.bar-chart__bar--grapes {
   background-color: #9e005d;
 }
 
-.bar-chart__bar--magenta {
+.bar-chart__bar--watermelon {
   background-color: #d4145a;
 }
 
