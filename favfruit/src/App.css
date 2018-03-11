@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+  background-color: #e2e2e2;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.8rem;
+  height: 100vh;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, p, a {
+  margin: 18px 0;
+  padding: 18px 0;
+}
+
+hr {
+  border: 1px solid #eee;
+}
+
+a { text-decoration: none; }
+
+h1 {
+  font-size: 4.2rem;
+  line-height: 1em;
+  position: relative;
+}
+
+h1::after {
+  border-bottom: 10px solid black;
+  content: "";
+  height: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 90px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+.card {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+  margin: 45px auto;
+  width: 400px;
+}
+
+.card__header {
+  padding: 0 24px;
+}
+
+.card__bar-chart {
+  margin: 45px 0;
+}
+
+/*
+ * Bar chart
+ */
+.bar-chart__bar {
+  background-color: red;
+  border-bottom-right-radius: 1em;
+  border-top-right-radius: 1em;
+  height: 25px;
+  min-width: 141px;
+  max-width: 325px;
+  position: relative;
+  width: 0;
+  animation: barGrow 3s forwards cubic-bezier(0.85, 0.03, 0.2, 0.99);
+}
+.bar-chart__bar:after {
+    content: "82";
+    font-weight: bold;
+    position: absolute;
+    right: -36px;
+    font-size: 2.6rem;
+}
+
+.bar-chart__bar__label {
+  color: white;
+  font-weight: bold;
+  line-height: 2.5rem;
+  position: absolute;
+  right: 18px;
+  top: 0;
+}
+
+/*
+ * List
+ */
+ .card__list-wrap {
+    margin-top: 72px;
+}
+
+.card__list__header {
+  color: #666;
+  border-bottom: 1px solid #b3b3b3;
+  font-size: 2.0rem;
+  font-weight: bold;
+  padding: 0 24px;
+}
+
+.card__list {
+  list-style: none;
+  margin: 0 0 0 24px;
+  padding: 0;
+}
+
+.card__list-wrap span {
+    flex: 0 1 50%;
+}
+
+.card__list__item {
+  border-bottom: 1px solid #b3b3b3;
+  margin: 0;
+  padding: 9px 24px 9px 0;
+}
+
+/*
+ * Colors
+ */
+.bar-chart__bar--apple {
+  background-color: #ed1c24;
+}
+
+.bar-chart__bar--cherry {
+  background-color: #c1272d;
+}
+
+.bar-chart__bar--orange {
+  background-color: #f15a24;
+}
+
+.bar-chart__bar--navy {
+  background-color: #2e3192;
+}
+
+.bar-chart__bar--gold {
+  background-color: #fbb03b;
+}
+
+.bar-chart__bar--lime {
+  background-color: #8cc63f;
+}
+
+.bar-chart__bar--green {
+  background-color: #009245;
+}
+
+.bar-chart__bar--brown {
+  background-color: #754c24;
+}
+
+.bar-chart__bar--hotpink {
+  background-color: #ed1e79;
+}
+
+.bar-chart__bar--purple {
+  background-color: #9e005d;
+}
+
+.bar-chart__bar--magenta {
+  background-color: #d4145a;
+}
+
+/*
+ * animations
+ */
+@keyframes barGrow {
+  to {width: 350px;}
+}
+/*
+ * flex
+ */
+.flex--default {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex--wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex--space-between {
+  justify-content: space-between;
+}
+
+.flex--vertical-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.flex--align-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.flex--align-right {
+  justify-content: flex-end;
+}
+
+.line-art-icon {
+  fill:none;stroke:#009245;stroke-miterlimit:10;
+}
