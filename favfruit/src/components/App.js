@@ -11,27 +11,27 @@ class App extends Component {
       {
         "id": "Chris A.",
         "fruit": "blackberries",
-        "count": 2,
+        "count": 32,
       },
       {
         "id": "Svetla B.",
         "fruit": "apple",
-        "count": 1,
+        "count": 12,
       },
       {
         "id": "Duncan C.",
         "fruit": "orange",
-        "count": 1,
+        "count": 41,
       },
       {
         "id": "Vlad D.",
-        "fruit": "blackberries",
-        "count": 2,
+        "fruit": "strawberries",
+        "count": 32,
       },
       {
         "id": "Dennis E.",
         "fruit": "banana",
-        "count": 1,
+        "count": 43,
       },
     ]
   }

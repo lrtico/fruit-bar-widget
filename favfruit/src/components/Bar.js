@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import sortBy from 'sort-by'
 
 class Bar extends Component {
 
@@ -7,13 +8,15 @@ class Bar extends Component {
     let fruit = e.target.firstChild.textContent
     let matchFruit = this.props.people.filter( person => person.fruit === fruit )
     let fruitCount = matchFruit[0].count
-    // console.log("The count of the clicked bar is ", fruitCount)
-    // console.log("fruit =", fruit)
     console.log(`Fruit selected: ${fruit}, ${fruitCount}`)
+    const bar = e.target
+    bar.classList.toggle("bar-chart__bar--active")
   }
   render() {
     const { people } = this.props
     console.log("data", people)
+    people.sort(sortBy('-count'))
+
     return (
       <div className="card__bar-chart">
         {people.map((fruit) => (
@@ -23,6 +26,7 @@ class Bar extends Component {
             onClick={this.handleClick}
           >
             <div className="bar-chart__bar__label">{fruit.fruit}</div>
+            <div className="bar-chart__bar__count">{fruit.count}</div>
           </div>
         ))}
       </div>

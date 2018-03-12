@@ -78,19 +78,28 @@ h1::after {
   background-color: red;
   border-bottom-right-radius: 1em;
   border-top-right-radius: 1em;
+  cursor: pointer;
   height: 25px;
   min-width: 141px;
   max-width: 325px;
   position: relative;
+  transition: all .2s cubic-bezier(0.74, 0.03, 0.25, 0.99);
+  transform-origin: bottom left;
   width: 0;
   animation: barGrow 3s forwards cubic-bezier(0.85, 0.03, 0.2, 0.99);
 }
-.bar-chart__bar:after {
+/* .bar-chart__bar:after {
     content: "82";
     font-weight: bold;
     position: absolute;
     right: -36px;
     font-size: 2.6rem;
+} */
+
+.bar-chart__bar--active {
+  box-shadow: 0px 0px 1px 1px rgba(0,0,0,.2);
+  transform: scaleX(1.02);
+  z-index: 2;
 }
 
 .bar-chart__bar__label {
@@ -100,6 +109,13 @@ h1::after {
   position: absolute;
   right: 18px;
   top: 0;
+}
+
+.bar-chart__bar__count {
+    font-weight: bold;
+    position: absolute;
+    right: -36px;
+    font-size: 2.6rem;
 }
 
 /*
@@ -131,6 +147,10 @@ h1::after {
   border-bottom: 1px solid #b3b3b3;
   margin: 0;
   padding: 9px 24px 9px 0;
+}
+
+.card__list__item:last-child {
+    border-bottom: none;
 }
 
 /*
