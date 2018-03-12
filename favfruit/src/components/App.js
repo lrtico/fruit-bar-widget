@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../App.css'
-import { FruitasticApi } from '../utils/FruitasticApi'
+import * as FruitasticApi from '../utils/FruitasticApi'
 import List from './List'
 import Bar from './Bar'
 
@@ -11,22 +11,27 @@ class App extends Component {
       {
         "id": "Chris A.",
         "fruit": "blackberries",
+        "count": 2,
       },
       {
         "id": "Svetla B.",
         "fruit": "apple",
+        "count": 1,
       },
       {
         "id": "Duncan C.",
         "fruit": "orange",
+        "count": 1,
       },
       {
         "id": "Vlad D.",
         "fruit": "blackberries",
+        "count": 2,
       },
       {
         "id": "Dennis E.",
         "fruit": "banana",
+        "count": 1,
       },
     ]
   }
