@@ -4,18 +4,39 @@ import sortBy from 'sort-by'
 class Bar extends Component {
 
   handleClick = (e) => {
-    // console.log("wax on")
+    e.stopPropagation()
+    //Output the fruit clicked and the popularity count
     let fruit = e.target.firstChild.textContent
     let matchFruit = this.props.people.filter( person => person.fruit === fruit )
     let fruitCount = matchFruit[0].count
     console.log(`Fruit selected: ${fruit}, ${fruitCount}`)
+
+    //Visually highlight the clicked row
     const bar = e.target
-    bar.classList.toggle("bar-chart__bar--active")
+    if (bar.classList.contains("bar-chart__bar")) {
+      bar.classList.toggle("bar-chart__bar--active")
+    } else if (bar.parentNode.classList.contains("bar-chart__bar")){
+      bar.parentNode.classList.toggle("bar-chart__bar--active")
+    }
   }
+
   render() {
     const { people } = this.props
-    console.log("data", people)
+
+    //Sort the bars in order of most popular
     people.sort(sortBy('-count'))
+
+    //Animate the bar growth to the correct width on page load
+    window.addEventListener("load", function(){
+        let bars = document.querySelectorAll('.bar-chart__bar')
+        for (let bar of bars) {
+          const count = bar.lastChild.textContent
+          // console.log("child", count)
+          const myWidth = Number(count) + 160 + "px"
+          // console.log("width", myWidth)
+          bar.style.width = myWidth
+        }
+    });
 
     return (
       <div className="card__bar-chart">
