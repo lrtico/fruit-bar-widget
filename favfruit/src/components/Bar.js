@@ -18,6 +18,10 @@ class Bar extends Component {
     } else if (bar.parentNode.classList.contains("bar-chart__bar")){
       bar.parentNode.classList.toggle("bar-chart__bar--active")
     }
+
+    //Filter the list below to only display the people that chose that fruit
+    console.log("Fruit", fruit)
+    this.setState({matchFruit})
   }
 
   render() {
