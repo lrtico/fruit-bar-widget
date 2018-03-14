@@ -7,10 +7,7 @@ class Bar extends Component {
     e.stopPropagation()
     //Output the fruit clicked and the popularity count
     let fruit = e.target.firstChild.textContent
-    // let matchFruit = this.props.people.filter( person => person.fruit === fruit )
-    // let fruitCount = matchFruit[0].count
     let fruitCount = e.target.lastChild.textContent
-
 
     //Visually highlight the clicked row
     const bar = e.target
@@ -32,42 +29,21 @@ class Bar extends Component {
         let bars = document.querySelectorAll('.bar-chart__bar')
         for (let bar of bars) {
           const count = bar.lastChild.textContent
-          console.log("child", count)
           const myWidth = Number(count) + 160 + "px"
-          console.log("width", myWidth)
           bar.style.width = myWidth
         }
     })
-    //Filter the list of fruits removing matches
-    // for (let person of people) {
-    //   person.count = 1
-    // }
+    //Create a blank array to take in a list of fruit strings from the state
     let favFruit = []
     for (let person of people) {
       favFruit.push(person.favoriteFruit)
     }
-    // let appleCount = favFruit.filter(fruit => fruit === 'apple').length
-    // console.log("# of apples in the array are ", appleCount)
-    // let blackberriesCount = favFruit.filter(fruit => fruit === 'blackberries').length
 
-    // console.log("fav fruits", favFruit)
-
-    // let counts = [];
-    // favFruit.forEach(function(fruit) {
-    //   counts[fruit] = (counts[fruit] || 0) + 1
-    // })
-    // console.log("fruit count", counts)
-
-    // favFruit.push(counts)
-    // console.log("favs", favFruit)
-
-    // let fruits = Array.from()
+    //Filter the list of fruits removing matches by creating a Set object
     let matchedFruit = Array.from(new Set(favFruit))
 
-    console.log("matched fruit", matchedFruit)
-
+    //Return the number of times each fruit is in the API call
     const countFunc = (obj) => {
-      // console.log("passed obj is ", obj)
       let count = 0
       if (obj === 'apple') {
         count = favFruit.filter(fruit => fruit === 'apple').length
@@ -102,7 +78,7 @@ class Bar extends Component {
       }
       return count
     }
-
+    //Formatting the array to be mappable, allowing us to return UI below
     let reformattedFavFruit = matchedFruit.map(obj => {
       let rObj = {}
       let counter = countFunc(obj)
@@ -110,7 +86,6 @@ class Bar extends Component {
       rObj.count = counter
       return rObj
     })
-    console.log("reformatted", reformattedFavFruit)
 
     //Sort the bars in order of most popular
     reformattedFavFruit.sort(sortBy('-count'))

@@ -5,7 +5,6 @@ class List extends Component {
 
   render() {
     const { people } = this.props
-    // console.log("data", people)
     return (
       <div className="card__list-wrap">
         <div className="card__list__header flex--default flex--space-between">
