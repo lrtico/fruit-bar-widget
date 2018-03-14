@@ -14,9 +14,9 @@ class List extends Component {
         </div>
         <ul className="card__list">
           {people.map((person) => (
-            <li key={person.id} className="card__list__item flex--default flex--space-between">
-              <span>{person.id}</span>
-              <span>{person.fruit}</span>
+            <li key={person.name} className="card__list__item flex--default flex--space-between">
+              <span>{person.name}</span>
+              <span>{person.favoriteFruit}</span>
             </li>
           ))}
         </ul>

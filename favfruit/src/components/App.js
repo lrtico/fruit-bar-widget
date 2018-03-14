@@ -7,34 +7,34 @@ import Bar from './Bar'
 
 class App extends Component {
   state = {
-    // people: [],
-    people: [
-      {
-        "id": "Chris A.",
-        "fruit": "blackberries",
-        "count": 24,
-      },
-      {
-        "id": "Svetla B.",
-        "fruit": "apple",
-        "count": 18,
-      },
-      {
-        "id": "Duncan C.",
-        "fruit": "orange",
-        "count": 27,
-      },
-      {
-        "id": "Vlad D.",
-        "fruit": "strawberries",
-        "count": 22,
-      },
-      {
-        "id": "Dennis E.",
-        "fruit": "banana",
-        "count": 20,
-      },
-    ]
+    people: [],
+    // people: [
+    //   {
+    //     "id": "Chris A.",
+    //     "fruit": "blackberries",
+    //     "count": 24,
+    //   },
+    //   {
+    //     "id": "Svetla B.",
+    //     "fruit": "apple",
+    //     "count": 18,
+    //   },
+    //   {
+    //     "id": "Duncan C.",
+    //     "fruit": "orange",
+    //     "count": 27,
+    //   },
+    //   {
+    //     "id": "Vlad D.",
+    //     "fruit": "strawberries",
+    //     "count": 22,
+    //   },
+    //   {
+    //     "id": "Dennis E.",
+    //     "fruit": "banana",
+    //     "count": 20,
+    //   },
+    // ]
   }
 
   componentDidMount() {
@@ -47,11 +47,11 @@ class App extends Component {
     // FruitasticApi.get(function(results) {
     //   this.setState({ results })
     // })
-    // let fruitObj = new FruitsApi();
-    // let fruitsResult = fruitObj.get((fruit) => {
-    //   this.setState({fruit})
-    //   console.log("Fruitastic state", this.state)
-    // })
+    let fruitObj = new FruitsApi();
+    let fruitsResult = fruitObj.get((people) => {
+      this.setState({people})
+      console.log("Fruitastic state", this.state)
+    })
   }
 
   render() {
