@@ -29,7 +29,7 @@ class Bar extends Component {
         let bars = document.querySelectorAll('.bar-chart__bar')
         for (let bar of bars) {
           const count = bar.lastChild.textContent
-          const myWidth = Number(count) + 160 + "px"
+          const myWidth = Number(count * 5) + 100 + "px"
           bar.style.width = myWidth
         }
     })
